@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pieredze ceļā no dzīvesvietas līdz LU</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500&display=swap">
+    <style>
+        :root {
+            --bg-light: #f4f6f8;
+            --text-light: #1a1a1a;
+            --accent-light: #002f6c;
+            --link-light: #005eb8;
+            --container-light: #d9e3f0;
+            --navbar-light: #002f6c;
+            --footer-light: #002f6c;
+
+            --bg-dark: #0e1a2a;
+            --text-dark: #f2f2f2;
+            --accent-dark: #79a6d2;
+            --link-dark: #accdfc;
+            --container-dark: #1a2d42;
+            --navbar-dark: #001b3f;
+            --footer-dark: #001b3f;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+            background-color: var(--bg-light);
+            color: var(--text-light);
+        }
+
+        h1, h2, h3 {
+            font-family: 'Bebas Neue', sans-serif;
+        }
+
+        section {
+            scroll-margin-top: 80px;
+            margin-bottom: 40px;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+            border-radius: 0.5rem;
+        }
+
+        .custom-section {
+            background-color: var(--container-light);
+            color: var(--text-light);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        #mainNav {
+            background-color: var(--navbar-light);
+            transition: background-color 0.3s;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        }
+
+        body.dark-mode #mainNav {
+            background-color: var(--navbar-dark);
+        }
+
+        #mainFooter {
+            background-color: var(--footer-light);
+            transition: background-color 0.3s;
+        }
+
+        body.dark-mode #mainFooter {
+            background-color: var(--footer-dark);
+        }
+
+        body.dark-mode {
+            background-color: var(--bg-dark);
+            color: var(--text-dark);
+        }
+
+        body.dark-mode .btn-primary {
+            background-color: var(--link-dark);
+            border-color: var(--link-dark);
+            color: var(--bg-dark);
+        }
+
+        body.dark-mode .custom-section {
+            background-color: var(--container-dark) !important;
+            color: var(--text-dark);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="z-index: 1030;" id="mainNav">
+        <div class="container">
+            <div class="d-flex align-items-center">
+                <h2 class="m-0 me-3" style="color: var(--text-dark);">Ceļš uz LU</h2>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" style="color: var(--text-dark);" href="#sakums">Sākums</a></li>
+                    <li class="nav-item"><a class="nav-link" style="color: var(--text-dark);" href="#marsruts">Maršruts</a></li>
+                    <li class="nav-item"><a class="nav-link" style="color: var(--text-dark);" href="#satiksme">Biļetes</a></li>
+                    <li class="nav-item"><a class="nav-link" style="color: var(--text-dark);" href="#mobilitate">Mobilly</a></li>
+                    <li class="nav-item"><a class="nav-link" style="color: var(--text-dark);" href="#muzika">Mūzika</a></li>
+                    <li class="nav-item"><a class="nav-link" style="color: var(--text-dark);" href="#portali">LU portāli</a></li>
+                    <li class="nav-item d-flex align-items-center">
+                        <button id="themeToggle" class="btn btn-outline-primary btn-sm ms-3">🌙</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-5 mt-5">
+        <section id="sakums" class="d-flex align-items-center text-white" style="
+            background-image: url('mainUni.png');
+            background-size: cover;
+            background-position: center;
+            height: 85vh;
+            position: relative;">
+            <div class="col-md-6 bg-dark bg-opacity-50 p-4 ps-md-5 ms-md-5 rounded text-start">
+                <h2 class="fw-bold display-4">Par ko ir šī mājaslapa</h2>
+                <p class="lead">Šī mājaslapa piedāvā ieskatu autorā digitālajā pieredzē, dodoties uz Latvijas Universitātei. Jūs varat atrast aprakstu par lietotnēm, kuras autors izmanto ikdienā.</p>
+                <p class="lead">Šeit apkopoti ieteikumi un padomi no dzīves pieredzes.</p>
+                <a href="#marsruts" class="btn btn-primary btn-lg">Uzzināt vairāk</a>
+            </div>
+        </section>
+
+
+        <section id="marsruts" class="py-5 custom-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6 order-md-2">
+                        <h1 class="text-uppercase fw-bold mb-3">Maršruts ar Google Maps un Waze</h1>
+                        <p>Mans iziešanas no mājas process vienmēr sākas ar maršruta plānošanu. Šim nolūkam es izmantoju divas lietotnes:</p>
+                        <ul>
+                            <li><b>Google Maps</b> - noderīga, kad pārvietojos ar sabiedrisko transportu un man jāaprēķina, kā visefektīvāk nokļūt galamērķī. Lietotnē var arī iestatīt iziešanas laiku vai nepieciešamo ierašanās laiku, kas ir ļoti noderīgi, lai saplānotu savu dienu.</li>
+                            <li><b>Waze</b> - lietoju gadījumos, kad vadu automašīnu. Šī lietotne labāk tiek galā ar maršruta plānošanu autovadītājiem. Tā palīdz apbraukt sastrēgumus un brīdina par iespējamajiem šķēršļiem uz ceļa.</li>
+                        </ul>
+                        <div class="mt-3 d-flex gap-3">
+                            <a href="https://www.google.com/maps" target="_blank" class="btn btn-primary">
+                                Atvērt Google Maps
+                            </a>
+                            <a href="https://www.waze.com/ul" target="_blank" class="btn btn-primary">
+                                Atvērt Waze
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 order-md-1 text-center">
+                        <img src="maps_waze.png" class="img-fluid rounded shadow" alt="Karte">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="satiksme" class="py-5 custom-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <h1 class="text-uppercase fw-bold mb-3">Biļetes ar Rīgas Satiksme</h1>
+                        <p>Lai iegādātos un izmantotu biļetes sabiedriskajam transportam, es izmantoju lietotni - <b>Rīgas Satiksme</b>.</p >
+                        <p>
+                            Tā ir ļoti ērta ikdienas lietošanai, īpaši, ja esi aizmirsis vai tev nav līdzi e-talons. Lietotnē var viegli iegādāties, apmaksāt un aktivizēt braucienus, un visas biļetes atrodas tavā telefonā, vienmēr pieejamas.
+                        </p>
+                        <a href="https://play.google.com/store/search?q=rigas+satiksme&c=apps&hl=ru" target="_blank" class="btn btn-primary">Apskatīt lietotni</a>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <img src="train-bus.png" class="img-fluid rounded shadow" alt="Autobuss">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="mobilitate" class="py-5 custom-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6 order-md-2">
+                        <h1 class="text-uppercase fw-bold mb-3">Mobilly: vilciens, stāvvieta</h1>
+                        <p>Mobily apvieno vairākus ikdienas risinājumus: vilcienu biļetes, autostāvvietas un citas ērtības vienā lietotnē.</p>
+                        <p>To es regulāri izmantoju, lai apmaksātu stāvvietu. Jāņem vērā, ka uz universitāti ne vienmēr ir izdevīgi braukt ar automašīnu, jo stāvvieta Rīgas centrā maksā diezgan daudz, un jāņem vērā arī degvielas izmaksas.
+                        </p>
+                        <p>Kā alternatīvu var izvēlēties vilcienu – lietotnē <b>Mobilly</b> var ērti iegādāties vilciena biļetes.</p>
+                        <p><em>Ja esi nokavējis visus autobusus, apskati, varbūt ātrais vilciens var tevi izglābt – bieži vien ar to var nokļūt galamērķī daudz ātrāk.</em></p>
+                    </div>
+                    <div class="col-md-6 order-md-1 text-center">
+                        <img src="mobily.png" class="img-fluid rounded shadow" alt="Vilciens">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="muzika" class="py-5 custom-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <h1 class="text-uppercase fw-bold mb-3">Spotify ceļā uz LU</h1>
+                        <p><b>Spotify</b> padara ceļu produktīvu — gan mūzika, gan podkāsti uzlabo koncentrēšanos un garastāvokli. Mūzika ir svarīga manas ikdienas ceļa sastāvdaļa — autobusā, automašīnā vai jebkur citur es klausos savus iecienītos trekus.</p>
+                        <p>Lietotne palīdz atrast jaunus trekus pēc manas gaumes, seko līdzi iecienīto mūzikas mākslinieku jaunumiem, kā arī ļauj ērti veidot pleilistus un skatīt statistiku par to, ko klausies. Lietotni var lietot bez maksas, bet ar abonementu tiek piedāvātas daudzas papildus priekšrocības.</p>
+                        <p>Mani top treki šonedēļ:</p>
+                        <ul>
+                            <li>The Weeknd - Blinding Lights</li>
+                            <li>Dua Lipa - Don't Start Now</li>
+                            <li>SZA - Good Days</li>
+                        </ul>
+                        <a href="https://open.spotify.com/" target="_blank" class="btn btn-primary">Klausīties Spotify</a>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <img src="music.png" class="img-fluid rounded shadow" alt="Mūzika">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portali" class="py-5 custom-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6 order-md-2">
+                        <h1 class="text-uppercase fw-bold mb-3">LU portāli</h1>
+                        <p>Lai veiksmīgi orientētos Latvijas Universitātē, tev būs nepieciešami divi svarīgi portāli - <b>LUIS</b> un <b>Estudijas</b>.</p> 
+                        <p><b>LUIS</b> sistēmā vari pārbaudīt savu lekciju sarakstu, kā arī atrast daudz citu noderīgu informāciju. Turklāt uz universitātes e-pastu bieži tiek nosūtīti svarīgi paziņojumi.</p>
+                        <p>Savukārt <b>Estudijās</b> tiek ievietoti visi uzdevumi. Izmantojot kalendāru, vari ērti saplānot savu laiku, pārbaudīt atzīmes un sekot studiju procesam.</p>
+                    </div>
+                    <div class="col-md-6 order-md-1 text-center">
+                        <img src="end.jpg" class="img-fluid rounded shadow" alt="LU">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="mainFooter" class="text-white py-4 mt-5" style="">
+        <div class="container text-center">
+            <p class="mb-1">Paldies par uzmanību!</p>
+            <small>Šī vietne izveidota "Tīmekļa dizaina pamati" kursa ietvaros.</small>
+            <p><small>Ivans Studilovs | is21264</small></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const toggleBtn = document.getElementById('themeToggle');
+        toggleBtn.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            if (document.body.classList.contains('dark-mode')) {
+                toggleBtn.textContent = '☀️';
+            } else {
+                toggleBtn.textContent = '🌙';
+            }
+        });
+    </script>
+</body>
+</html>
